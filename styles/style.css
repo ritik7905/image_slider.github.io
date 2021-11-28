@@ -1,0 +1,131 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 65.5%;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #51075e;
+}
+
+.heading {
+  width: 100%;
+  background: #020024;
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(100%, #79096f), to(#00d4ff));
+  background: linear-gradient(90deg, #020024 0%, #79096f 100%, #00d4ff 100%);
+}
+
+.heading h1 {
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.thumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.thumbs img {
+  width: 118px;
+  border-radius: 10px;
+  margin: 20px 10px 20px;
+  -webkit-box-shadow: 2px 7px 28px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 2px 7px 28px 0px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+
+.lg_img {
+  width: 611px;
+  border-radius: 10px;
+  margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 2px 7px 28px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 2px 7px 28px 0px rgba(0, 0, 0, 0.75);
+}
+
+.btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.btns .prevBtn {
+  border: none;
+  outline: none;
+  padding: 12px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.btns .prevBtn:hover {
+  background-color: indigo;
+  color: lavender;
+  -webkit-transform: all 1.5s;
+          transform: all 1.5s;
+}
+
+.btns .nextBtn:hover {
+  background-color: indigo;
+  color: lavender;
+  -webkit-transform: all 1.5s;
+          transform: all 1.5s;
+}
+
+.btns .nextBtn {
+  border: none;
+  outline: none;
+  padding: 12px 26px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+#caption {
+  text-align: center;
+  color: grey;
+  font-size: 25px;
+  margin-top: -38px;
+  position: relative;
+}
+/*# sourceMappingURL=style.css.map */

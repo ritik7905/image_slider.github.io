@@ -1,0 +1,246 @@
+// ######################################## //
+// ## MIXINS.SCSS ## //
+// ######################################## //
+
+// ----------------------------------
+// Placeholder Mixin
+// ----------------------------------
+@mixin input-placeholder {
+    &.placeholder {
+      @content;
+    }
+    &:-moz-placeholder {
+      @content;
+    }
+    &::-moz-placeholder {
+      @content;
+    }
+    &:-ms-input-placeholder {
+      @content;
+    }
+    &::-webkit-input-placeholder {
+      @content;
+    }
+  }
+  
+  // ----------------------------------
+  // Media Query Mixin
+  // ----------------------------------
+  $iphone5-width: 350px;
+  $iphone6-width: 375px;
+  $tablet-width: 768px;
+  $tablet-p-width: 991px;
+  $desktop-width: 1024px;
+  $desktop-width-lg: 1500px;
+  
+  // iPhone5 Mixin
+  @mixin iphone5 {
+    @media (max-width: #{$iphone5-width}) {
+      @content;
+    }
+  }
+  
+  // iPhone6 Mixin
+  @mixin iphone6 {
+    @media (min-width: #{$iphone6-width}) and (max-width: #{$tablet-width - 1px}) {
+      @content;
+    }
+  }
+  
+  // Mobile Mixin
+  @mixin mobile {
+    @media (max-width: #{$tablet-width - 1px}) {
+      @content;
+    }
+  }
+  
+  // Mobile Mixin (Landscape Orientation)
+  @mixin mobile-o-l {
+    @media (max-width: #{$tablet-width - 1px}) and (orientation:landscape) {
+      @content;
+    }
+  }
+  
+  // Mobile-Tablet(P) Mixin
+  @mixin mobile-tablet-p {
+    @media (max-width: #{$tablet-p-width}) {
+      @content;
+    }
+  }
+  
+  // Tablet (L/P) Mixin
+  @mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+      @content;
+    }
+  }
+  
+  // Tablet (P) Mixin
+  @mixin tablet-p {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$tablet-p-width}) {
+      @content;
+    }
+  }
+  
+  // Tablet (L) Mixin
+  @mixin tablet-l {
+    @media (min-width: #{$tablet-p-width + 1px}) and (max-width: #{$desktop-width - 1px}) {
+      @content;
+    }
+  }
+  
+  // Tablet & Desktop Mixin
+  @mixin tablet-desktop {
+    @media (min-width: #{$tablet-p-width + 1px}) {
+      @content;
+    }
+  }
+  
+  // Tablet (L/P) & Desktop Mixin
+  @mixin tablet-desktop-full {
+    @media (min-width: #{$tablet-width - 1px}) {
+      @content;
+    }
+  }
+  
+  // Desktop Mixin
+  @mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+      @content;
+    }
+  }
+  
+  // Large Desktops
+  @mixin desktop-lg {
+    @media (min-width: #{$desktop-width-lg}) {
+      @content;
+    }
+  }
+  
+  // Chrome Browsers Only
+  @mixin chrome {
+    @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+      @content;
+    }
+  }
+  
+  // ----------------------------------
+  // Transition Mixin
+  // ----------------------------------
+  @mixin transition(
+    $transition-property: all,
+    $transition-time: 0.3s,
+    $method: cubic-bezier(0.165, 0.84, 0.44, 1)
+  ) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+  }
+  
+  // ----------------------------------
+  // Brandon Grotesque Font Family
+  // ----------------------------------
+  @mixin ff-primary() {
+    font-family: "Gilroy", sans-serif !important;
+    line-height: 1.5;
+  
+    strong {
+      font-weight: bold;
+    }
+  }
+  
+  // ----------------------------------
+  // Heading Color
+  // ----------------------------------
+  @mixin headings-all() {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .title1,
+    .title2,
+    .title3,
+    .title4,
+    .title5,
+    .title6 {
+      color: $theme-primary-text;
+    }
+  }
+  
+  // ----------------------------------
+  // Truncate Text (ellipsis) Mixin
+  // ----------------------------------
+  @mixin truncate($truncation-boundary) {
+    max-width: $truncation-boundary;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  // ----------------------------------
+  // Font Smoothing Mixin (Cross Browser)
+  // ----------------------------------
+  @mixin font-smoothing($value: on) {
+    @if $value == on {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    } @else {
+      -webkit-font-smoothing: subpixel-antialiased;
+      -moz-osx-font-smoothing: auto;
+    }
+  }
+  
+  // ----------------------------------
+  // Keyframes Mixin (Cross Browser)
+  // ----------------------------------
+  @mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+      @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+      @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+      @content;
+    }
+    @-o-keyframes #{$animation-name} {
+      @content;
+    }
+    @keyframes #{$animation-name} {
+      @content;
+    }
+  }
+  
+  // ----------------------------------
+  // Animation (Cross Browser)
+  // ----------------------------------
+  @mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};
+  }
+  
+  // primary shadow
+  $primaryshadow: 2px 7px 28px 0px rgba(0,0,0,0.75);;
+  
+  // primary radius
+  $radius-primary: 8px;
+  
+  // primary padding
+  $padding-horizontal: 0 16px;
+  
+  // scroll hide
+  @mixin scroll-hide() {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none; /* Safari and Chrome */
+    }
+  }
+  
