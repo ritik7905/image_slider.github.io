@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<style>
+    #lg_img{
+        width: 600px;
+        border-radius: 10px;
+       display: flex;
+       margin: 0px auto;
+    }
+    #capt{
+        color: rgb(151, 146, 144);
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        padding-top: 10px;
+    }
+    .container{
+        margin-top: -55px;
+    }
+    .btns{
+        padding-top: 20px;
+    }
+     
+    .btns #prevBtn,#nextBtn{
+        background-color: brown;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        color: aliceblue;
+        font-size: 17px;
+    }
+    
+
+</style>
+<body>
+
+    <div class="heading">
+        <h1>Image Gallery</h1>
+    </div>
+
+    <div class="thumbs">
+        <img src="./assets/images/pic0.jpg" alt="Tiger">
+        <img src="./assets/images/pic1.jpg" alt="Dog">
+        <img src="./assets/images/pic2.jpg" alt="Tiger">
+        <img src="./assets/images/pic3.jpg" alt="Tiger">
+        <img src="./assets/images/pic4.jpg" alt="Dog">
+    </div>
+    <br>
+    
+  
+        <img src="./assets/images/pic5.jpg" id="lg_img" alt="Wild_animals">
+        <br>
+        <div class="container">
+    <p id="capt">Tiger</p>
+    <div class="btns">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+    </div>
+</div>
+   
+    <script src="./js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+@import '../variables/color';
+@import '../variables/mixins';
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 65.5%;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #51075e;
+}
+
+.heading {
+  width: 100%;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(121, 9, 111, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+
+  h1 {
+    color: $white;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+  }
+}
+
+//Images Section
+
+
+  .thumbs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 118px;
+      border-radius: 10px;
+      //   margin-right: 10px;
+      //   margin-top: 20px ;
+      //   margin-bottom: 20px;
+      margin: 20px 10px 20px;
+      box-shadow: $primaryshadow;
+      cursor: pointer;
+    }
+  }
+  #lg_img{
+
+    width: 600px;
+    border-radius: 10px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: $primaryshadow;
+
+
+  }
+//Buttons
+
+.btns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  #prevBtn {
+    border: none;
+    outline: none;
+    padding: 12px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: $black;
+
+    color: $white;
+  }
+
+  #prevBtn:hover {
+    background-color: indigo;
+    color: lavender;
+    transform:  all 1.5s;
+  }
+  #nextBtn:hover{
+    background-color: indigo;
+    color: lavender;
+    transform:  all 1.5s; 
+  }
+
+  #nextBtn {
+    border: none;
+    outline: none;
+    padding: 12px 26px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: $black;
+    color: $white;
+  }
+}
+
+#caption{
+
+  text-align: center;
+  color: grey;
+  font-size: 25px;
+  margin-top: -38px;
+  position: relative;
+
+}
