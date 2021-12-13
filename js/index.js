@@ -23,12 +23,16 @@ prev.onclick = () => {
   document.getElementById('capt').innerHTML = caption[count];
 }
 
-// var thumbs = document.getElementsByClassName("thumbs").getElementsByTagName("img");
-function gallery() {
-  document.getElementsById('lg_img').src = this.src;
+
+
+
+function gallery(){
+
+  document.getElementById("lg_img").src = this.src;
+
 }
-var thumbs = document.getElementsByClassName("thumbs").getElementsByTagName("img");
-  
-for (let i = 0; i < thumbs.length; i++) {
-  thumbs[i].onclick = gallery;
+var thumbnail = document.getElementById("wrapper").getElementsByTagName("img");
+
+for(let i= 0; i<thumbnail.length; i++){
+  thumbnail[i].onclick = gallery;
 }

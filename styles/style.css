@@ -28,7 +28,7 @@ body {
   font-size: 30px;
 }
 
-.thumbs {
+#wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,7 +40,7 @@ body {
           align-items: center;
 }
 
-.thumbs img {
+#wrapper img {
   width: 118px;
   border-radius: 10px;
   margin: 20px 10px 20px;
@@ -49,8 +49,8 @@ body {
   cursor: pointer;
 }
 
-.lg_img {
-  width: 611px;
+#lg_img {
+  width: 600px;
   border-radius: 10px;
   margin: 0px auto;
   display: -webkit-box;
@@ -83,7 +83,7 @@ body {
   gap: 20px;
 }
 
-.btns .prevBtn {
+.btns #prevBtn {
   border: none;
   outline: none;
   padding: 12px;
@@ -95,21 +95,21 @@ body {
   color: #ffffff;
 }
 
-.btns .prevBtn:hover {
+.btns #prevBtn:hover {
   background-color: indigo;
   color: lavender;
   -webkit-transform: all 1.5s;
           transform: all 1.5s;
 }
 
-.btns .nextBtn:hover {
+.btns #nextBtn:hover {
   background-color: indigo;
   color: lavender;
   -webkit-transform: all 1.5s;
           transform: all 1.5s;
 }
 
-.btns .nextBtn {
+.btns #nextBtn {
   border: none;
   outline: none;
   padding: 12px 26px;
